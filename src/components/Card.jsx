@@ -11,7 +11,7 @@ function Card() {
     <div>
       <div className="flex ml-20 mr-20 gap-8 mt-10 flex-wrap">
         {images.map((image) => (
-          <div className="card h-[300px] w-[250px] bg-green-400 rounded-md flex flex-col" key={image.id}>
+          <div className="card h-[300px] w-[250px] bg-gray-300 rounded-md flex flex-col" key={image.id}>
             <div className="bg-zinc-300 h-[50%] w-full">
               <img
                 src={image.largeImageURL}
@@ -21,7 +21,7 @@ function Card() {
             </div>
             <div className="mt-2">
               <div className="flex flex-col text-sm ml-2 mt-2 gap-2">
-                <h1>Photo by Ritik</h1>
+                <h1>Photo by {image.user}</h1>
                 <p>Views:{image.views}</p>
                 <p>Downloads:{image.downloads}</p>
                 <p>Likes:{image.likes}</p>

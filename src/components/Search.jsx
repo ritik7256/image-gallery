@@ -1,10 +1,13 @@
-import { useContext } from "react"
+import { useContext,useEffect } from "react"
 import { ImageContext } from "../context/ImageContext"
 
 
 function Search() {
   const {FetchData,setinput,input}=useContext(ImageContext)  
-
+  
+  useEffect(() => {
+    FetchData(); // Fetch default images on initial render
+  }, []);
   return (
     <>
     <div className="flex justify-center">
